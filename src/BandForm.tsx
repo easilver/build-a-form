@@ -13,14 +13,14 @@ interface Props{
 
 const BandForm = (props: Props): React.JSX.Element  => {
   const {band} = props
-  const eventDate = new Date(band.date).toLocaleDateString()
-  const [totalPrice, setTotalPrice] = useState(0)
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [address, setAddress] = useState('')
-  const [cardNumber, setCardNumber] = useState('')
-  const [expiration, setExpiration] = useState('')
-  const [cvv, setCvv] = useState('')
+  const eventDate: string = new Date(band.date).toLocaleDateString()
+  const [totalPrice, setTotalPrice]: [number, (arg: number)=> void] = useState(0)
+  const [firstName, setFirstName]: [string, (arg: string)=> void] = useState('')
+  const [lastName, setLastName]: [string, (arg: string)=> void] = useState('')
+  const [address, setAddress]: [string, (arg: string)=> void] = useState('')
+  const [cardNumber, setCardNumber]: [string, (arg: string)=> void] = useState('')
+  const [expiration, setExpiration]: [string, (arg: string)=> void] = useState('')
+  const [cvv, setCvv]: [string, (arg: string)=> void] = useState('')
 
   const handleSubmit = () => {
     console.log(`Bought tickets for $${totalPrice / 100}`)
