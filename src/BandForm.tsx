@@ -130,7 +130,7 @@ const BandFormDiv = styled.div`
     width: 100%;
     max-width: 1350px;
     padding: 50px 20px;
-    margin: 0;
+    margin: 0 auto;
     .event-info {
       width: 100%;
       padding: 0 0 24px 0;
